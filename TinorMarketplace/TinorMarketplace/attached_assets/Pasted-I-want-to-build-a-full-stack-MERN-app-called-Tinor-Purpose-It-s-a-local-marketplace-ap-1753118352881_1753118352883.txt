@@ -1,0 +1,58 @@
+I want to build a full-stack MERN app called **Tinor**.
+
+### Purpose:
+It's a local marketplace app that helps users find the nearest shops where a particular product is available in stock, along with price and expiry date.
+
+### App Features:
+
+#### For Customers (Frontend):
+- A clean homepage with a search bar to find nearby products.
+- Show list of nearby shops that have the product in stock.
+- Display for each result:
+  - Product name
+  - Price
+  - Shop name
+  - Distance from user (or filter by locality)
+  - Expiry date of the product (if applicable)
+  - Remaining stock
+- Option to "Book" or "Hold" an item in advance (like reservation)
+- Shop ratings and reviews
+- Responsive design (React + Tailwind preferred)
+
+#### For Shopkeepers (Admin Dashboard):
+- Login/Signup (JWT auth)
+- Add a new product:
+  - Name, price, stock, expiry date, category
+- Update or remove products
+- See list of all products and their stock status
+- Mark when a product goes out of stock
+
+#### Backend Requirements (Node.js + Express + MongoDB):
+- REST API endpoints:
+  - `/api/products/search` → to find nearby available products
+  - `/api/products/add` → shopkeeper adds product
+  - `/api/products/update` → update stock/expiry
+  - `/api/bookings` → to reserve items
+- MongoDB models:
+  - `User` (role: customer or shopkeeper)
+  - `Product` (with expiry, stock, shopId, etc.)
+  - `Booking`
+  - `Shop` (location, name, rating, etc.)
+- Use JWT authentication (secure routes for shopkeepers)
+- Use Mongoose for DB modeling
+- Use CORS, dotenv, express middleware, and proper error handling
+
+#### Extra Features (Optional):
+- Alert if product is about to expire in 2–3 days
+- Sorting/filtering by price, expiry, or distance
+- Live stock update
+- Add product images
+- Use Google Maps API for accurate shop locations (if possible)
+
+#### Deployment:
+- Deploy backend on Render
+- Deploy frontend on Netlify or Vercel
+- Use `.env` files for secrets
+- Include README.md with instructions
+
+Please generate clean, modular, production-ready code for both frontend (React with Tailwind) and backend (Express + MongoDB), with folder structure and instructions.
